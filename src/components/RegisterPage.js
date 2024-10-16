@@ -20,7 +20,7 @@ function RegisterPage() {
     setError('');
 
     try {
-      const response = await axios.post('https://gt-backend-pfho.onrender.com/auth/register', formData);
+      const response = await axios.post('https://gt-backend-pfho.onrender.com/api/auth/register', formData);
       console.log('Registration successful:', response?.data);
       navigate('/login'); // Redirect to login page after successful registration
     } catch (err) {
