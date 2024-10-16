@@ -157,40 +157,6 @@ useEffect(() => {
   return (
     <div className="space-y-6">
       <div className="bg-white p-6 rounded-lg shadow">
-        <h2 className="text-xl font-semibold mb-4">Select Booking Details</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <select value={selectedCenter} onChange={handleCenterChange} className="border p-2 rounded">
-            <option value="">Select Center</option>
-            {centers.map(center => (
-              <option key={center._id} value={center._id}>{center.name}</option>
-            ))}
-          </select>
-          <select value={selectedSport} onChange={handleSportChange} className="border p-2 rounded">
-            <option value="">Select Sport</option>
-            {sports.map(sport => (
-              <option key={sport._id} value={sport._id}>{sport.name}</option>
-            ))}
-          </select>
-          <input type="date" value={selectedDate} onChange={handleDateChange} className="border p-2 rounded" />
-        </div>
-        <button onClick={fetchBookings} className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-          View Bookings
-        </button>
-      </div>
-
-      <div className="bg-white p-6 rounded-lg shadow">
-        <h2 className="text-xl font-semibold mb-4">Current Bookings</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {bookings.map(booking => (
-            <div key={booking._id} className="border p-4 rounded">
-              <p><strong>Court:</strong> {booking.court}</p>
-              <p><strong>Time:</strong> {booking.startTime} - {booking.endTime}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="bg-white p-6 rounded-lg shadow">
         <h2 className="text-xl font-semibold mb-4">Create New Booking</h2>
         <form onSubmit={handleCreateBooking} className="space-y-4">
           <select
@@ -217,24 +183,44 @@ useEffect(() => {
               <option key={index} value={slot.startTime}>{slot.startTime}</option>
             ))}
           </select>
-          {/* <select
-            name="endTime"
-            value={newBooking.endTime}
-            onChange={handleNewBookingChange}
-            className="border p-2 rounded w-full"
-            required
-          >
-            <option value="">Select End Time</option>
-            {availableSlots.map((slot, index) => (
-              <option key={index} value={slot.endTime}>{slot.endTime}</option>
-            ))}
-          </select> */}
           <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
             Create Booking
           </button>
         </form>
       </div>
-    </div>
+      <div className="bg-white p-6 rounded-lg shadow">
+        <h2 className="text-xl font-semibold mb-4">Current Bookings</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {bookings.map(booking => (
+            <div key={booking._id} className="border p-4 rounded">
+              <p><strong>Court:</strong> {booking.court}</p>
+              <p><strong>Time:</strong> {booking.startTime} - {booking.endTime}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="bg-white p-6 rounded-lg shadow">
+        <h2 className="text-xl font-semibold mb-4">Select Booking Details</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <select value={selectedCenter} onChange={handleCenterChange} className="border p-2 rounded">
+            <option value="">Select Center</option>
+            {centers.map(center => (
+              <option key={center._id} value={center._id}>{center.name}</option>
+            ))}
+          </select>
+          <select value={selectedSport} onChange={handleSportChange} className="border p-2 rounded">
+            <option value="">Select Sport</option>
+            {sports.map(sport => (
+              <option key={sport._id} value={sport._id}>{sport.name}</option>
+            ))}
+          </select>
+          <input type="date" value={selectedDate} onChange={handleDateChange} className="border p-2 rounded" />
+        </div>
+        <button onClick={fetchBookings} className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          View Bookings
+        </button>
+      </div>
+  </div>
   );
 }
 
