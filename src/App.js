@@ -1,20 +1,4 @@
-// import React from 'react';
-// import BookingPage from './components/BookingPage';
 
-// function App() {
-//   return (
-//     <div className="App bg-gray-100 min-h-screen">
-//       <header className="bg-blue-600 text-white p-4">
-//         <h1 className="text-2xl font-bold">Sports Booking System</h1>
-//       </header>
-//       <main className="container mx-auto px-4 py-8">
-//         <BookingPage />
-//       </main>
-//     </div>
-//   );
-// }
-
-// export default App;
 
 
 import React from 'react';
@@ -27,7 +11,8 @@ import RegisterPage from './components/RegisterPage';
 function App() {
   return (
     <Router>
-      <div className="App bg-gray-100 min-h-screen">
+      <div className="App bg-gray-100 min-h-screen"
+   style={{ backgroundImage: "url('https://wallpapercave.com/wp/wp2981710.jpg')" }}>
         <Navbar />
         <main className="container mx-auto px-4 py-8">
           <Routes>
