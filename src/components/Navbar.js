@@ -14,12 +14,12 @@ function Navbar() {
   return (
     <nav className="bg-blue-600 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white text-2xl font-bold">Sports Booking</div>
+        <div className="text-black text-2xl font-bold align-item:center">GAMELIO</div>
         <div className="hidden md:flex space-x-4">
-          <Link to="/" className="text-white hover:underline"></Link>
+          <Link to="/" className="text-black hover:underline"></Link>
           {isLoggedIn ? (
             // Optionally add a Logout link here if needed
-            <button className="text-white hover:underline" onClick={() => {
+            <button className="text-black hover:underline" onClick={() => {
               localStorage.removeItem('token'); // Clear the token on logout
               window.location.reload(); // Reload the page to reflect changes
             }}>
@@ -27,8 +27,8 @@ function Navbar() {
             </button>
           ) : (
             <>
-              <Link to="/login" className="text-white hover:underline">Login</Link>
-              <Link to="/register" className="text-white hover:underline">Register</Link>
+              <Link to="/login" className="text-black hover:underline">Login</Link>
+              <Link to="/register" className="text-black hover:underline">Register</Link>
             </>
           )}
         </div>
