@@ -11,7 +11,7 @@ import RegisterPage from './components/RegisterPage';
 function App() {
   return (
     <Router>
-      <div className="App bg-gray-100 min-h-screen"
+      <div className="App bg-cover bg-center min-h-screen"
    style={{ backgroundImage: "url('https://wallpapercave.com/wp/wp2981710.jpg')" }}>
         <Navbar />
         <main className="container mx-auto px-4 py-8">
