@@ -33,7 +33,7 @@ function LoginPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-2xl font-bold mb-4">Login</h2>
+      <h2 className="mt-10 text-2xl font-bold mb-8 text-blue-200 border-b-2 border-blue-500 pb-2 tracking-wide">LOGIN</h2>
       {error && <p className="text-red-500">{error}</p>}
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow">
         <div className="mb-4">
@@ -58,7 +58,7 @@ function LoginPage() {
             required
           />
         </div>
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        <button type="submit" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:from-purple-600 hover:to-blue-500 hover:shadow-xl">
           Login
         </button>
       </form>
