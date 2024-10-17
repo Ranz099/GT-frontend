@@ -14,21 +14,21 @@ function Navbar() {
   return (
     <nav className="bg-green-100 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-black text-2xl font-bold align-item:center">GAMELIO</div>
+        <div className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 text-4xl font-extrabold tracking-wider uppercase drop-shadow-2xl">GAMELIO</div>
         <div className="hidden md:flex space-x-4">
           <Link to="/" className="text-black hover:underline"></Link>
           {isLoggedIn ? (
             // Optionally add a Logout link here if needed
-            <button className="text-black hover:underline" onClick={() => {
+            <button className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 font-semibold px-6 py-3 rounded-full border-2 border-blue-500 bg-white hover:bg-gradient-to-r hover:from-pink-900 hover:to-pink-900 hover:text-pink hover:border-transparent transition-all duration-300 ease-in-out shadow-lg transform hover:-translate-y-1 hover:shadow-xl ml-4" onClick={() => {
               localStorage.removeItem('token'); // Clear the token on logout
               window.location.reload(); // Reload the page to reflect changes
             }}>
-              Logout
+              LOGOUT
             </button>
           ) : (
             <>
-              <Link to="/login" className="text-black hover:underline">Login</Link>
-              <Link to="/register" className="text-black hover:underline">Register</Link>
+              <Link to="/login" className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 font-semibold px-6 py-3 rounded-full border-2 border-blue-500 bg-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:text-black hover:border-transparent transition-all duration-300 ease-in-out shadow-lg transform hover:-translate-y-1 hover:shadow-xl">Login</Link>
+              <Link to="/register" className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 font-semibold px-6 py-3 rounded-full border-2 border-blue-500 bg-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:text-black hover:border-transparent transition-all duration-300 ease-in-out shadow-lg transform hover:-translate-y-1 hover:shadow-xl ml-4">Register</Link>
             </>
           )}
         </div>
@@ -40,10 +40,10 @@ function Navbar() {
           </button>
         </div>
       </div>
-      <div className={`md:hidden ${isMobile ? 'block' : 'hidden'} bg-blue-600`}>
-        <Link to="/" className="block text-white hover:underline p-2">Home</Link>
+      <div className={`md:hidden ${isMobile ? 'block' : 'hidden'} bg-blue`}>
+        <Link to="/" className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 font-semibold px-6 py-3 rounded-full border-2 border-blue-500 bg-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:text-black hover:border-transparent transition-all duration-300 ease-in-out shadow-lg transform hover:-translate-y-1 hover:shadow-xl ml-4">Home</Link>
         {isLoggedIn ? (
-          <button className="block text-white hover:underline p-2" onClick={() => {
+          <button className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 font-semibold px-6 py-3 rounded-full border-2 border-blue-500 bg-white hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 hover:text-pink hover:border-transparent transition-all duration-300 ease-in-out shadow-lg transform hover:-translate-y-1 hover:shadow-xl ml-4" onClick={() => {
             localStorage.removeItem('token'); // Clear the token on logout
             window.location.reload(); // Reload the page to reflect changes
           }}>
