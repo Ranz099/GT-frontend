@@ -32,7 +32,7 @@ function LoginPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-20 py-8">
       <h2 className="mt-10 text-2xl font-bold mb-8 text-blue-200 border-b-2 border-blue-500 pb-2 tracking-wide">LOGIN</h2>
       {error && <p className="text-red-500">{error}</p>}
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow">
