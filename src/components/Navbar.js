@@ -12,7 +12,7 @@ function Navbar() {
   const isLoggedIn = !!localStorage.getItem('token');
 
   return (
-    <nav className="bg-blue-600 p-4">
+    <nav className="bg-green-100 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-black text-2xl font-bold align-item:center">GAMELIO</div>
         <div className="hidden md:flex space-x-4">
